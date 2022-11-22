@@ -52,6 +52,11 @@ public class Main {
     }
 
     private static void generateSourceFiles() throws IOException {
+        File theDir = new File("data/output");
+        if (!theDir.exists()){
+            theDir.mkdirs();
+        }
+
         String fileStart = "public class Class%d {\n"
                 + "    public Class%d() {\n";
         String fileEnd = "    }\n"
